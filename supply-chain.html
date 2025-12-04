@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Supply Chain | SCIP</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="page">
+      <div class="background-band"></div>
+
+      <nav class="top-nav" aria-label="Global navigation">
+        <div class="logo">
+          <div class="logo-mark">B</div>
+          <div>
+            <div class="logo-title">BASF Coatings</div>
+            <div class="logo-subtitle">SCIP</div>
+          </div>
+        </div>
+        <div class="search-bar">
+          <span class="icon">🔍</span>
+          <input
+            type="search"
+            placeholder="Search data, KPIs, processes…"
+            aria-label="Global search"
+          />
+        </div>
+        <div class="profile">
+          <div class="profile-name">Alex Morgan</div>
+          <div class="avatar" aria-label="User profile">AM</div>
+        </div>
+      </nav>
+
+      <!-- Breadcrumb Navigation -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">Supply Chain</span>
+      </nav>
+
+      <!-- Page Header -->
+      <section class="module-masthead" aria-label="Supply Chain overview">
+        <div>
+          <h1>Supply Chain – Operational Performance</h1>
+          <p class="lead">
+            Monitor OTIF, cycle times, and fulfillment KPIs across BASF's global footprint.
+          </p>
+        </div>
+      </section>
+
+      <!-- Global Filters -->
+      <section class="filters" aria-label="Global filters">
+        <div class="filter">
+          <label for="region">Region</label>
+          <select id="region" name="region">
+            <option>Global</option>
+            <option>EMEA</option>
+            <option>NA</option>
+            <option>APAC</option>
+            <option>SA</option>
+          </select>
+        </div>
+        <div class="filter">
+          <label for="country">Country</label>
+          <select id="country" name="country">
+            <option>All</option>
+            <option>Germany</option>
+            <option>United States</option>
+            <option>China</option>
+            <option>Brazil</option>
+          </select>
+        </div>
+        <div class="filter">
+          <label for="product-line">Product line</label>
+          <select id="product-line" name="product-line">
+            <option>All lines</option>
+            <option>Automotive OEM</option>
+            <option>Automotive Refinish</option>
+            <option>Industrial Coatings</option>
+            <option>Decorative Coatings</option>
+          </select>
+        </div>
+        <div class="filter">
+          <label for="time-period">Time period</label>
+          <select id="time-period" name="time-period">
+            <option>Last 30 days</option>
+            <option>Quarter to date</option>
+            <option>Year to date</option>
+            <option>Rolling 12 months</option>
+          </select>
+        </div>
+      </section>
+
+      <!-- KPI Snapshot Tiles -->
+      <main id="main-content" class="kpi-tiles-section" aria-label="Supply Chain KPI dashboard">
+        <h2 class="section-title">Key Performance Indicators</h2>
+        <div class="kpi-grid">
+          
+          <!-- Order Cycle Time -->
+          <article class="kpi-tile" tabindex="0">
+            <div class="kpi-header">
+              <h3>Order Cycle Time</h3>
+              <span class="trend-badge positive" aria-label="Trend: improving">
+                <span class="trend-icon">↓</span>
+                <span class="trend-text">8% better</span>
+              </span>
+            </div>
+            <div class="kpi-value">
+              <span class="kpi-number">4.2</span>
+              <span class="kpi-unit">days</span>
+            </div>
+            <p class="kpi-description">Avg. time from order to shipment</p>
+            <div class="kpi-chips">
+              <span class="chip">Target: 3.8 days</span>
+              <span class="chip info">In progress</span>
+            </div>
+            <button type="button" class="primary kpi-button">Open dashboard</button>
+          </article>
+
+          <!-- OTIF (On-Time-In-Full) -->
+          <article class="kpi-tile" tabindex="0">
+            <div class="kpi-header">
+              <h3>OTIF</h3>
+              <span class="trend-badge positive" aria-label="Trend: improving">
+                <span class="trend-icon">↑</span>
+                <span class="trend-text">2.1% up</span>
+              </span>
+            </div>
+            <div class="kpi-value">
+              <span class="kpi-number">94.8</span>
+              <span class="kpi-unit">%</span>
+            </div>
+            <p class="kpi-description">Orders delivered on-time & in-full</p>
+            <div class="kpi-chips">
+              <span class="chip">Target: 96% </span>
+              <span class="chip success">On track</span>
+            </div>
+            <button type="button" class="primary kpi-button">Open dashboard</button>
+          </article>
+
+          <!-- Backorder Rate -->
+          <article class="kpi-tile" tabindex="0">
+            <div class="kpi-header">
+              <h3>Backorder Rate</h3>
+              <span class="trend-badge negative" aria-label="Trend: declining">
+                <span class="trend-icon">↑</span>
+                <span class="trend-text">1.2% rise</span>
+              </span>
+            </div>
+            <div class="kpi-value">
+              <span class="kpi-number">5.3</span>
+              <span class="kpi-unit">%</span>
+            </div>
+            <p class="kpi-description">Orders pending fulfillment</p>
+            <div class="kpi-chips">
+              <span class="chip">Target: &lt;3%</span>
+              <span class="chip warning">Attention needed</span>
+            </div>
+            <button type="button" class="primary kpi-button">Open dashboard</button>
+          </article>
+
+          <!-- Perfect Order Rate -->
+          <article class="kpi-tile" tabindex="0">
+            <div class="kpi-header">
+              <h3>Perfect Order Rate</h3>
+              <span class="trend-badge positive" aria-label="Trend: stable">
+                <span class="trend-icon">→</span>
+                <span class="trend-text">Stable</span>
+              </span>
+            </div>
+            <div class="kpi-value">
+              <span class="kpi-number">91.5</span>
+              <span class="kpi-unit">%</span>
+            </div>
+            <p class="kpi-description">Orders completed flawlessly</p>
+            <div class="kpi-chips">
+              <span class="chip">Target: 93%</span>
+              <span class="chip info">Near target</span>
+            </div>
+            <button type="button" class="primary kpi-button">Open dashboard</button>
+          </article>
+
+          <!-- Invoice Accuracy -->
+          <article class="kpi-tile" tabindex="0">
+            <div class="kpi-header">
+              <h3>Invoice Accuracy</h3>
+              <span class="trend-badge positive" aria-label="Trend: improving">
+                <span class="trend-icon">↑</span>
+                <span class="trend-text">0.5% up</span>
+              </span>
+            </div>
+            <div class="kpi-value">
+              <span class="kpi-number">98.7</span>
+              <span class="kpi-unit">%</span>
+            </div>
+            <p class="kpi-description">Invoices without discrepancies</p>
+            <div class="kpi-chips">
+              <span class="chip">Target: 99%</span>
+              <span class="chip success">Excellent</span>
+            </div>
+            <button type="button" class="primary kpi-button">Open dashboard</button>
+          </article>
+
+        </div>
+      </main>
+
+    </div>
+  </body>
+</html>

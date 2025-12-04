@@ -312,7 +312,8 @@ button:focus-visible,
   align-self: start;
 }
 
-.tile {
+.tile,
+.tiles a.tile {
   display: grid;
   grid-template-columns: 64px 1fr;
   gap: 12px;
@@ -325,6 +326,8 @@ button:focus-visible,
     transform 120ms ease,
     box-shadow 120ms ease,
     border-color 120ms ease;
+  text-decoration: none;
+  color: inherit;
 }
 
 .tile:hover {
@@ -497,5 +500,255 @@ button:focus-visible,
 
   .sidebar {
     flex-direction: column;
+  }
+}
+
+/* ============================================
+   Supply Chain Module Page Styles
+   ============================================ */
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  font-size: 13px;
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  position: relative;
+  z-index: 1;
+}
+
+.breadcrumb a {
+  color: var(--brand-blue);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 120ms ease;
+}
+
+.breadcrumb a:hover {
+  color: var(--brand-navy);
+}
+
+.breadcrumb a:focus-visible {
+  outline: 2px solid var(--brand-blue);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.breadcrumb-sep {
+  color: var(--grey-600);
+}
+
+.breadcrumb-current {
+  color: #0c1b33;
+  font-weight: 600;
+}
+
+.module-masthead {
+  background: var(--surface);
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  position: relative;
+  z-index: 1;
+}
+
+.module-masthead h1 {
+  margin: 0 0 10px;
+  font-size: 28px;
+  line-height: 1.3;
+  color: #0c1b33;
+}
+
+.kpi-tiles-section {
+  position: relative;
+  z-index: 1;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 16px;
+  color: #0c1b33;
+}
+
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.kpi-tile {
+  background: var(--surface);
+  border: 1px solid var(--grey-200);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+  transition:
+    transform 120ms ease,
+    box-shadow 120ms ease,
+    border-color 120ms ease;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.kpi-tile:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 44px rgba(15, 59, 120, 0.12);
+  border-color: var(--brand-light);
+}
+
+.kpi-tile:focus-visible {
+  outline: 2px solid var(--brand-blue);
+  outline-offset: 2px;
+}
+
+.kpi-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.kpi-tile h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #0c1b33;
+  flex: 1;
+}
+
+.trend-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.trend-badge.positive {
+  background: rgba(34, 197, 94, 0.12);
+  color: #22c55e;
+}
+
+.trend-badge.negative {
+  background: rgba(239, 68, 68, 0.12);
+  color: #ef4444;
+}
+
+.trend-icon {
+  display: inline-block;
+}
+
+.trend-text {
+  display: inline-block;
+}
+
+.kpi-value {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 16px 0;
+  border-top: 1px solid var(--grey-200);
+  border-bottom: 1px solid var(--grey-200);
+}
+
+.kpi-number {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--brand-navy);
+  line-height: 1;
+}
+
+.kpi-unit {
+  font-size: 14px;
+  color: var(--grey-600);
+  font-weight: 500;
+}
+
+.kpi-description {
+  margin: 0;
+  font-size: 13px;
+  color: var(--grey-600);
+  line-height: 1.4;
+}
+
+.kpi-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  background: var(--grey-100);
+  color: #0c1b33;
+}
+
+.chip.info {
+  background: rgba(28, 124, 214, 0.12);
+  color: var(--brand-blue);
+}
+
+.chip.success {
+  background: rgba(34, 197, 94, 0.12);
+  color: #22c55e;
+}
+
+.chip.warning {
+  background: rgba(245, 158, 11, 0.12);
+  color: #f59e0b;
+}
+
+.kpi-button {
+  margin-top: auto;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Responsive adjustments for KPI grid */
+@media (max-width: 1200px) {
+  .kpi-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .breadcrumb {
+    font-size: 12px;
+    padding: 10px 14px;
+  }
+
+  .module-masthead h1 {
+    font-size: 24px;
+  }
+
+  .section-title {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .kpi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .kpi-number {
+    font-size: 28px;
+  }
+
+  .kpi-tile {
+    padding: 16px;
+    gap: 12px;
   }
 }
